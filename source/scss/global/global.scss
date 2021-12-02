@@ -4,7 +4,7 @@ body {
   position: relative;
   min-height: 100vh;
   background-color: $black;
-  background-image: url(/img/bg.webp);
+  background-image: url("../img/bg.webp");
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
