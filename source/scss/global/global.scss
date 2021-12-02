@@ -1,0 +1,231 @@
+// глобальные стили кроме normalize
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background-color: $black;
+  background-image: url(/img/bg.webp);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: $font-roboto;
+  color: $white;
+}
+.container {
+  // @include make-container();
+  // @include make-container-max-widths();
+  max-width: 1134px;
+}
+.row {
+  --bs-gutter-x: 30px;
+}
+
+img {
+  @include img-fluid();
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.page-wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  max-width: 1440px;
+  min-height: 100vh;
+}
+
+.page-class {
+  &__title {
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-family: $font-play;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.25px;
+    text-align: center;
+  }
+
+  &__text {
+    margin: 0 0 50px 0;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.3px;
+  }
+}
+
+.products-row {
+  margin-bottom: 20px;
+}
+
+.product-block {
+  margin-bottom: $spacer;
+  &__img {
+    position: relative;
+    margin: 0 0 28px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0 0 12px 0;
+    padding: 0;
+    font-family: $font-play;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 36px;
+    letter-spacing: 0.25px;
+    text-align: center;
+
+    & strong {
+      color: $site-green;
+    }
+  }
+
+  &__description {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    color: $card-text;
+  }
+
+  & .change-hover {
+    transition: fill $transition-delay $transition-func, stroke $transition-delay $transition-func;
+  }
+
+  &:hover .change-hover {
+    fill: $site-green-250;
+    stroke: $site-green;
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+  padding: 16px 59px;
+  font-family: $font-play;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.25px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color $transition-delay $transition-func, color $transition-delay $transition-func,
+    background-color $transition-delay $transition-func, box-shadow $transition-delay $transition-func;
+
+  &-primary {
+    border-color: $site-green;
+    background-color: $site-green;
+    color: $white;
+
+    &:hover {
+      box-shadow: 0px 0px 10px $site-green;
+      background-color: transparent;
+      color: $white;
+    }
+  }
+}
+
+.order-form {
+  &__caption {
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-family: $font-play;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.25px;
+  }
+
+  &__row {
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    margin: 0;
+    padding: 20px;
+    border-radius: 0;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+  }
+}
+
+#helloModal {
+  & .btn-close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 20px;
+    height: 20px;
+    background: none;
+    color: $white;
+    z-index: +1;
+    transition: color $transition-delay $transition-func;
+
+    &:hover {
+      color: $site-green;
+    }
+  }
+
+  & .modal-dialog {
+    min-width: 550px;
+  }
+
+  & .modal-content {
+    background-color: $black;
+    border: 2px solid $site-green;
+    box-shadow: 0px 0px 20px $site-green-500;
+    border-radius: 0;
+    outline: 0;
+  }
+
+  & .modal-body {
+    padding: 75px 85px;
+  }
+}
+
+/*breakpoints*/
+@media (min-width: 576px) {
+
+}
+
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+  .product-block {
+    &__title {
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1400px) {
+
+}

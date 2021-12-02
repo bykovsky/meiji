@@ -1,0 +1,29 @@
+//- #helloModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+//- 	.modal-dialog(role='document')
+//- 		.modal-content
+//- 			.modal-header
+//- 				h5#exampleModalLabel.modal-title Gulp is watching you!
+//- 				button.close(type='button' data-dismiss='modal' aria-label='Close')
+//- 					span(aria-hidden='true') &times;
+//- 			.modal-body
+//- 				| 'Hello world' from main.js
+//- 			.modal-footer
+//- 				button.btn.btn-secondary(type='button' data-dismiss='modal') Oh...
+//- 				button.btn.btn-primary(type='button') No way!
+
+#helloModal.modal.fade(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
+        svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M18 2L2 18" stroke="currentColor" stroke-width="2" stroke-linecap="round")
+          path(d="M2 2L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round")
+      .modal-body
+        form.order-form(action="")
+          h3.order-form__caption ПРЕИМУЩЕСТВА G-SYNC
+          .order-form__row
+            input.form-control.order-form__input(type="text", placeholder="Имя")
+          .order-form__row
+            input.form-control.order-form__input(type="email", placeholder="Mail")
+          .order-form__row.text-center
+            button.button.button-primary(type="submit") Купить
