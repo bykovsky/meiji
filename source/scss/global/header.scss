@@ -102,7 +102,9 @@ header {
     cursor: pointer;
     transition: color $transition-delay $transition-func;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       color: $site-green;
     }
   }

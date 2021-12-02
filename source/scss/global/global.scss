@@ -134,11 +134,14 @@ img {
     background-color: $site-green;
     color: $white;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       box-shadow: 0px 0px 10px $site-green;
       background-color: transparent;
       color: $white;
     }
+
   }
 }
 
@@ -182,7 +185,9 @@ img {
     z-index: +1;
     transition: color $transition-delay $transition-func;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       color: $site-green;
     }
   }
